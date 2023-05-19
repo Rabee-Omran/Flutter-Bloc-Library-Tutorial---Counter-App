@@ -13,5 +13,5 @@ class CounterInitial extends CounterState {
 }
 
 class CounterValueChangedState extends CounterState {
-  CounterValueChangedState({required counter}) : super(counter: counter);
+  const CounterValueChangedState({required counter}) : super(counter: counter);
 }
