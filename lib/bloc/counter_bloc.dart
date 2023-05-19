@@ -6,7 +6,7 @@ part 'counter_state.dart';
 
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
   int counter = 0;
-  CounterBloc() : super(CounterInitial()) {
+  CounterBloc() : super(const CounterInitial()) {
     on<IncreamentEvent>(((event, emit) {
       emit(CounterValueChangedState(counter: ++counter));
     }));
