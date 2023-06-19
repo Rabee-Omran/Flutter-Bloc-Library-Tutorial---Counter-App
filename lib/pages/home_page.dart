@@ -26,21 +26,11 @@ class HomePage extends StatelessWidget {
               height: 10,
             ),
             BlocBuilder<CounterBloc, CounterState>(
-              builder: (context, state) {
-                if (state is CounterInitial) {
-                  return const Text(
-                    "0",
-                    style: TextStyle(color: Colors.blueGrey, fontSize: 30),
-                  );
-                } else if (state is CounterValueChangedState) {
-                  return Text(
-                    state.counter.toString(),
-                    style:
-                        const TextStyle(color: Colors.blueGrey, fontSize: 30),
-                  );
-                } else {
-                  return const SizedBox();
-                }
+              builder: (_, state) {
+                return Text(
+                  "${state.counter}",
+                  style: const TextStyle(color: Colors.blueGrey, fontSize: 30),
+                );
               },
             ),
           ],
